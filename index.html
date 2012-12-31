@@ -8,6 +8,12 @@
     <link href="css/boggle.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <title>Boggle Solver &mdash; by Shane da Silva</title>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+function submit()
+{
+	window.localStorage.setItem("gamestring",gamestring);
+}
+</script>
   </head>
   <body>
     <div id="instructions">
@@ -38,6 +44,11 @@
 
     <script type="text/javascript" src="js/trie.js"></script>
     <script type="text/javascript" src="js/boggle.js"></script>
+    <label>game string
+      <input type="text" name="gamestring" id="gamestring">
+    </label>
+    submit
+    <input type="submit" name="submit" id="solve-button" value="Submit" onClick="submit()">
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
